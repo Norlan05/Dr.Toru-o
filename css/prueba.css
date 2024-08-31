@@ -1,0 +1,404 @@
+/* General Styles */
+/* Estilos generales aplicados a todo el documento */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Fuente principal del sitio */
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    padding: 0; /* Elimina el relleno por defecto del navegador */
+    color: #333; /* Color del texto principal */
+    background-color: #f9f9f9; /* Color de fondo de la página */
+}
+
+/* Header Styles */
+/* Estilos para la cabecera del sitio */
+header {
+    border-bottom: 2px solid #050505; /* Borde inferior de la cabecera */
+    position: relative; /* Posicionamiento relativo para el posicionamiento de elementos hijos */
+}
+
+/* Estilos para la barra superior */
+.top-bar {
+    background-color: #1f2a6f; /* Color de fondo de la barra superior */
+    color: #fefefe; /* Color del texto en la barra superior */
+    padding: 10px; /* Espaciado interno de la barra superior */
+    display: flex; /* Uso de flexbox para disposición de elementos */
+    justify-content: space-between; /* Distribuye el contenido con espacio entre ellos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    border-bottom: 2px solid #05050531; /* Borde inferior con opacidad */
+}
+
+.top-bar p {
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+    font-size: 16px; /* Tamaño de fuente para el texto en la barra superior */
+}
+
+/* Estilos para la sección principal del encabezado */
+.main-header {
+    display: flex; /* Uso de flexbox para disposición de elementos */
+    justify-content: space-between; /* Distribuye el contenido con espacio entre ellos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding: 8px; /* Espaciado interno de la sección principal del encabezado */
+    background-color: #004c8c; /* Color de fondo de la sección principal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la sección */
+    border-bottom: 2px solid #0505053d; /* Borde inferior con opacidad */
+}
+
+/* Ajuste de tamaño del logo */
+.main-header img {
+    max-width: 120px; /* Tamaño máximo del logo */
+    height: auto; /* Mantiene la relación de aspecto del logo */
+    margin-right: 20px; /* Espaciado a la derecha del logo */
+    background-color: transparent; /* Fondo transparente para el logo */
+    border: 1px solid #f9f9f9; /* Borde alrededor del logo */
+    border-radius: 5px; /* Bordes redondeados del logo */
+}
+
+/* Estilos para el título del encabezado principal */
+.main-header h1 {
+    margin: 0; /* Elimina el margen por defecto del título */
+    font-size: 24px; /* Tamaño de fuente para el título */
+    color: #ffffff; /* Color del texto del título */
+}
+
+/* Estilos para el horario de atención */
+.hours {
+    font-size: 25px; /* Tamaño de fuente para el horario de atención */
+    color: #050505; /* Color más suave para el horario de atención */
+    margin-bottom: 10px; /* Espaciado inferior del horario de atención */
+    text-align: right; /* Alineación del texto a la derecha */
+    font-family: 'Poppins', sans-serif; /* Fuente personalizada para el horario de atención */
+    text-shadow: 
+        0 0 2px #fff, 
+        0 0 5px #0b0fd9, 
+        0 0 8px #33ccff, 
+        0 0 12px #04e2f2; /* Efecto de sombra de texto neón */
+    animation: neon-flicker 2s infinite; /* Animación de parpadeo más lenta */
+}
+
+/* Estilos para el contenedor del horario y el botón */
+.schedule-container {
+    display: flex; /* Uso de flexbox para disposición de elementos */
+    flex-direction: column; /* Disposición en columna */
+    align-items: flex-end; /* Alineación al final del contenedor (a la derecha) */
+    margin: 20px; /* Espaciado exterior del contenedor */
+}
+
+/* Estilos para el botón de reserva */
+.schedule-btn {
+    background-color: #33ccff; /* Color de fondo del botón */
+    color: #000; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Elimina el borde por defecto del botón */
+    border-radius: 25px; /* Bordes más redondeados del botón */
+    text-shadow: 0 0 5px #33ccff; /* Efecto de sombra de texto en el botón */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el cambio de color y sombra */
+}
+
+.schedule-btn:hover {
+    background-color: #08f527; /* Color de fondo del botón al pasar el ratón */
+    box-shadow: 0 4px 12px rgba(0, 255, 0, 0.7); /* Sombra más suave al pasar el ratón */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #2a3c5c; /* Color de fondo del menú de navegación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo del menú */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 10px; /* Espaciado interno de la lista */
+    display: flex; /* Uso de flexbox para disposición de elementos */
+    justify-content: space-around; /* Distribuye el contenido con espacio entre ellos */
+}
+
+nav ul li {
+    margin: 0; /* Elimina el margen por defecto de los elementos de la lista */
+}
+
+nav ul li a {
+    color: white; /* Color del texto en los enlaces del menú */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Fuente en negrita para los enlaces */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    position: relative; /* Posicionamiento relativo para el efecto de subrayado */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+nav ul li a::after {
+    content: ''; /* Elemento vacío para el efecto de subrayado */
+    position: absolute; /* Posicionamiento absoluto para el subrayado */
+    left: 0; /* Alinea el subrayado a la izquierda */
+    bottom: 0; /* Alinea el subrayado al fondo */
+    height: 2px; /* Altura del subrayado */
+    width: 100%; /* Ancho del subrayado */
+    background-color: #52f806; /* Color del subrayado */
+    transform: scaleX(0); /* Escala inicial del subrayado (oculto) */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de subrayado */
+    transform-origin: bottom right; /* Punto de origen de la transformación */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Escala del subrayado al pasar el ratón (visible) */
+    transform-origin: bottom left; /* Punto de origen de la transformación al pasar el ratón */
+}
+
+nav ul li a:hover {
+    background-color: #eb3e47; /* Color de fondo del enlace al pasar el ratón */
+    border-radius: 4px; /* Bordes redondeados del enlace al pasar el ratón */
+}
+
+/* Services Section */
+/* Estilos para la sección de servicios */
+.services {
+    padding: 40px 20px; /* Espaciado interno de la sección de servicios */
+    background-color: #f1f4f9; /* Color de fondo de la sección de servicios */
+}
+
+.services h2,
+.services h3 {
+    text-align: center; /* Alineación del texto al centro */
+    color: #333; /* Color del texto de los títulos en la sección de servicios */
+}
+
+/* Estilos para las tarjetas de servicio */
+.service-cards {
+    display: flex; /* Uso de flexbox para disposición de tarjetas */
+    justify-content: space-around; /* Distribuye las tarjetas con espacio entre ellas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    margin-top: 30px; /* Espaciado superior de las tarjetas */
+}
+
+.card {
+    background-color: white; /* Color de fondo de las tarjetas */
+    padding: 20px; /* Espaciado interno de las tarjetas */
+    margin: 10px; /* Espaciado exterior de las tarjetas */
+    width: 23%; /* Ancho de las tarjetas (ajustable según el diseño) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra sutil alrededor de las tarjetas */
+    border: 1px solid #ddd; /* Borde sutil alrededor de las tarjetas */
+    text-align: center; /* Alineación del texto al centro en las tarjetas */
+    border-radius: 8px; /* Bordes redondeados de las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto de movimiento y sombra */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Movimiento hacia arriba al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card h3 {
+    color: #333; /* Color del texto del título en las tarjetas */
+    margin-bottom: 15px; /* Espaciado inferior del título en las tarjetas */
+}
+
+/* Estilos para los botones de las tarjetas */
+.card a {
+    display: inline-block; /* Muestra el enlace como un bloque en línea */
+    background-color: #f57a9a; /* Color de fondo del botón en la tarjeta */
+    color: white; /* Color del texto del botón en la tarjeta */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.card a:hover {
+    background-color: #d65a7a; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Clock Styles */
+/* Estilos para el reloj digital */
+#clock {
+    font-family: 'Arial', sans-serif; /* Fuente para el reloj digital */
+    font-size: 20px; /* Tamaño de fuente para el reloj digital */
+    color: #ffffff; /* Color del texto del reloj digital */
+    padding: 5px 10px; /* Espaciado interno del reloj digital */
+    text-align: center; /* Alineación del texto al centro */
+    border: 2px solid #fff; /* Borde blanco alrededor del reloj digital */
+    border-radius: 5px; /* Bordes redondeados del reloj digital */
+    text-shadow: 
+        0 0 4px #fff, 
+        0 0 11px #0b0fd9, 
+        0 0 19px #33ccff, 
+        0 0 40px #04e2f2; /* Efecto de sombra de texto neón */
+    animation: neon-flicker 2s infinite; /* Animación de parpadeo */
+}
+
+/* Footer Styles */
+/* Estilos para el pie de página */
+.footer-container {
+    background: linear-gradient(to bottom, #333, #222); /* Gradiente para el fondo del pie de página */
+    padding: 10px; /* Espaciado interno del pie de página */
+    display: flex; /* Uso de flexbox para disposición de elementos */
+    justify-content: space-between; /* Distribuye el contenido con espacio entre ellos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+.footer-branding {
+    width: 45%; /* Ancho del área de marca del pie de página */
+    color: #fff; /* Color del texto en el área de marca */
+    padding: 10px; /* Espaciado interno del área de marca */
+    border-right: 1px solid #444; /* Borde derecho del área de marca */
+}
+
+.footer-contact-info {
+    width: 45%; /* Ancho del área de información de contacto */
+    color: #fff; /* Color del texto en el área de información de contacto */
+    padding: 10px; /* Espaciado interno del área de información de contacto */
+}
+
+.footer-contact-info p {
+    margin-bottom: 10px; /* Espaciado inferior de los párrafos en el área de información de contacto */
+}
+
+.footer-contact-info i {
+    font-size: 18px; /* Tamaño de fuente para los íconos en el área de información de contacto */
+    margin-right: 10px; /* Espaciado a la derecha de los íconos */
+}
+
+/* Estilos para los títulos en el pie de página */
+h3 {
+    font-weight: bold; /* Fuente en negrita para los títulos */
+    margin-bottom: 5px; /* Espaciado inferior de los títulos */
+}
+
+.footer-copyright {
+    background-color: #333; /* Color de fondo del área de derechos de autor */
+    color: #fff; /* Color del texto en el área de derechos de autor */
+    padding: 5px; /* Espaciado interno del área de derechos de autor */
+    text-align: center; /* Alineación del texto al centro */
+    font-size: 15px; /* Tamaño de fuente en el área de derechos de autor */
+    border-top: 1px solid #444; /* Borde superior del área de derechos de autor */
+}
+
+/* Neon Flicker Animation */
+/* Animación de parpadeo neón para los efectos */
+@keyframes neon-flicker {
+    0% { text-shadow: 
+        0 0 4px #fff, 
+        0 0 11px #0b0fd9, 
+        0 0 19px #33ccff, 
+        0 0 40px #04e2f2;
+    }
+    50% { text-shadow: 
+        0 0 2px #fff, 
+        0 0 5px #0b0fd9, 
+        0 0 8px #33ccff, 
+        0 0 12px #04e2f2;
+    }
+    100% { text-shadow: 
+        0 0 4px #fff, 
+        0 0 11px #0b0fd9, 
+        0 0 19px #33ccff, 
+        0 0 40px #04e2f2;
+    }
+}
+@media screen and (max-width: 1700px){
+
+    .container__cover{
+        background-position: 50%;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+
+    header{
+        padding: 40px;
+    }
+
+    .container__cover{
+        background-position: -100px;
+    }
+
+    .container__cover .svg img{
+        width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container__cover{
+        background-image: url("");
+        background-color: #FD8986;
+    }
+
+    .container__cover .svg img{
+        display: none;
+    }
+
+    .container__cover .text{
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 720px){
+
+    .menu nav{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background: white;
+        width: 250px;
+        height: 100vh;
+        padding: 40px;
+        z-index: 1;
+        transition: all 300ms;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .menu ul li{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .menu ul li a{
+        color: #bebebe;
+    }
+
+    #selected{
+        background: none;
+        padding: 0px;
+        border-radius: none;
+        color: #F6615D;
+    }
+
+    .menu nav img{
+        display: block;
+        width: 60px;
+    }
+
+    #back_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        display: none;
+    }
+
+    .menu #btn_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+    .menu #btn_menu:hover{
+        background: rgba(255, 255, 255, 0.2);
+    }
+}

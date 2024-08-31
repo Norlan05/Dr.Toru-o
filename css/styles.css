@@ -1,0 +1,116 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #00695c;
+    color: white;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+.faq-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #00796b;
+}
+
+.spacer {
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Estilo 3D para las tarjetas */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 0.8s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.front img {
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.front h3 {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #00695c;
+}
+
+.back {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.back p {
+    padding: 0 20px;
+    font-size: 1.2em;
+}
+
